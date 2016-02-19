@@ -11,10 +11,10 @@ stop_id,stop_name,stop_lat,stop_lon
 1010,ROSS,25.786288,-80.379077
 1011,Main Entrance Texas Brazil and Cheesecake Factory,25.786295,-80.381403
 1012,Entry #2 - Old Navy,25.787467,-80.383355
-1013,Bass Pro Shop,
-1014,DOLPHIN MALL Miami-Dade Main Bus Stop,
-1015,1801 NW 117th Avenue - IKEA,
-1016,11698 NW 25th St - US Postal Service,
+1013,Bass Pro Shop,25.788658,-80.384232
+1014,DOLPHIN MALL Miami-Dade Main Bus Stop,25.790182,-80.382716
+1015,1801 NW 117th Avenue - IKEA,25.792441,-80.384875
+1016,11698 NW 25th St - US Postal Service,25.796089,-80.384969
 1017,11411 NW 25th St - Our Lady of Mercy Catholic Cemetary,
 1018,10730 NW 25th St La Covacha,
 1019,2390 NW 107th Avenue - Midas,
