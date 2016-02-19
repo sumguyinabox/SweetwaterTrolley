@@ -15,10 +15,10 @@ stop_id,stop_name,stop_lat,stop_lon
 1014,DOLPHIN MALL Miami-Dade Main Bus Stop,25.790182,-80.382716
 1015,1801 NW 117th Avenue - IKEA,25.792441,-80.384875
 1016,11698 NW 25th St - US Postal Service,25.796089,-80.384969
-1017,11411 NW 25th St - Our Lady of Mercy Catholic Cemetary,
-1018,10730 NW 25th St La Covacha,
-1019,2390 NW 107th Avenue - Midas,
-1020,1890 NW 107th Avenue - BP gas station/ MD bus stop,
+1017,11411 NW 25th St - Our Lady of Mercy Catholic Cemetary,25.796756,-80.380409
+1018,10730 NW 25th St La Covacha,25.796825,-80.369556
+1019,2390 NW 107th Avenue - Midas,25.795821,-80.369141
+1020,1890 NW 107th Avenue - BP gas station/ MD bus stop,25.791140,-80.369053
 1021,1500 NW 107th Avenue - County Federal Credit Union,
 1022,1414 NW 107th Avenue - MD bus stop,
 1023,1390 NW 107th Avenue - MD bus stop,
