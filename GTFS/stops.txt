@@ -19,13 +19,13 @@ stop_id,stop_name,stop_lat,stop_lon
 1018,10730 NW 25th St La Covacha,25.796825,-80.369556
 1019,2390 NW 107th Avenue - Midas,25.795821,-80.369141
 1020,1890 NW 107th Avenue - BP gas station/ MD bus stop,25.791140,-80.369053
-1021,1500 NW 107th Avenue - County Federal Credit Union,
-1022,1414 NW 107th Avenue - MD bus stop,
-1023,1390 NW 107th Avenue - MD bus stop,
-1024,500 NW 107th Avenue - MD bus stop,
-1025,318 NW 107th Avenue - MD bus stop,
-1026,200 NW 107th Avenue - MD bus stop,
-1027,10701 NW W. Flagler - Mobil / Food Star,
+1021,1500 NW 107th Avenue - County Federal Credit Union,25.788252,-80.368964
+1022,1414 NW 107th Avenue - MD bus stop,25.786728,-80.368925
+1023,1390 NW 107th Avenue - MD bus stop,25.785788,-80.368890
+1024,500 NW 107th Avenue - MD bus stop,25.775014,-80.369670
+1025,318 NW 107th Avenue - MD bus stop,25.773186,-80.369493
+1026,200 NW 107th Avenue - MD bus stop,25.770899,-80.369308
+1027,10701 NW W. Flagler - Mobil / Food Star,25.768930,-80.369127
 1028,10910 W. Flagler - My Pueblo Restaurant,
 1029,10983 SW 4th Street - MD bus stop,
 1030,110th Avenue SW 5th St - MD bus stop,
