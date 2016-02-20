@@ -26,15 +26,15 @@ stop_id,stop_name,stop_lat,stop_lon
 1025,318 NW 107th Avenue - MD bus stop,25.773186,-80.369493
 1026,200 NW 107th Avenue - MD bus stop,25.770899,-80.369308
 1027,10701 NW W. Flagler - Mobil / Food Star,25.768930,-80.369127
-1028,10910 W. Flagler - My Pueblo Restaurant,
-1029,10983 SW 4th Street - MD bus stop,
-1030,110th Avenue SW 5th St - MD bus stop,
-1031,500 SW 109th Avenue - City of Sweetwater,
-1032,City Hall, POLICE Department and MD Clerk of Courts,
-1033,512 SW 109th Avenue - City of Sweetwater Passport Office,
-1034,7th SW 110th Avenue - Stop sign,
-1035,7th Tr SW 110th Avenue - Stop sign,
-1036,7th Tr SW 113th and 114th Avenue,
+1028,10910 W. Flagler - My Pueblo Restaurant,25.768546,-80.373628
+1029,10983 SW 4th Street - MD bus stop,25.764667,-80.374820
+1030,110th Avenue & SW 5th St - MD bus stop,25.764048,-80.374683
+1031,500 SW 109th Avenue - City of Sweetwater,25.764052,-80.373102
+1032,City Hall - POLICE Department and MD Clerk of Courts,25.764056,-80.372703
+1033,512 SW 109th Avenue - City of Sweetwater Passport Office,25.763737,-80.372658
+1034,7th & SW 110th Avenue - Stop sign,25.762511,-80.374408
+1035,7th Tr & SW 110th Avenue - Stop sign,25.761653,-80.374474
+1036,7th Tr & SW 113th and 114th Avenue,
 1037,250 SW 114th Avenue Jorge Mas Canosa Youth Center / Ronselli Park,
 1038,11495 W. Flagler - Social Security / Robles / Villa Hermosa,
 1039,11699 W. Flagler - Salon Del Reino De Los Testigos De Jehova,
