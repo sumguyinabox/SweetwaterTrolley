@@ -34,22 +34,22 @@ stop_id,stop_name,stop_lat,stop_lon
 1033,512 SW 109th Avenue - City of Sweetwater Passport Office,25.763737,-80.372658
 1034,7th & SW 110th Avenue - Stop sign,25.762511,-80.374408
 1035,7th Tr & SW 110th Avenue - Stop sign,25.761653,-80.374474
-1036,7th Tr & SW 113th and 114th Avenue,
-1037,250 SW 114th Avenue Jorge Mas Canosa Youth Center / Ronselli Park,
-1038,11495 W. Flagler - Social Security / Robles / Villa Hermosa,
-1039,11699 W. Flagler - Salon Del Reino De Los Testigos De Jehova,
-1040,117th Avenue SW 1st St - Corner,
-1041,11590 SW 2nd St - MD bus stop,
-1042,11490 SW 2nd St - MD bus stop,
-1043,455 NW 114th Avenue - (New Building),
-1044,4th Tr NW 110th Avenue,
-1045,6th St NW 114th Avenue,
-1046,7th NW 113th Avenue,
-1047,7th NW 112th Avenue,
-1048,606 NW 112th Avenue - MD bus Stop,
-1049,11235 NW 5th St - Vann Academy / MD bus stop,
-1050,112th Avenue NW 2nd Tr - MD bus stop,
-1051,112th Avenue NW 1st St - MD bus stop,
+1036,7th Tr & SW 113th and 114th Avenue,25.761595,-80.379491
+1037,250 SW 114th Avenue Jorge Mas Canosa Youth Center / Ronselli Park,25.766016,-80.380840
+1038,11495 W. Flagler - Social Security / Robles / Villa Hermosa,25.768366,-80.382832
+1039,11699 W. Flagler - Salon Del Reino De Los Testigos De Jehova,25.768327,-80.383487
+1040,117th Avenue & SW 1st St - Corner,25.768286,-80.384690
+1041,11590 SW 2nd St - MD bus stop,25.766397,-80.383631
+1042,11490 SW 2nd St - MD bus stop,25.766419,-80.382725
+1043,455 NW 114th Avenue - (New Building),25.772568,-80.381368
+1044,4th Tr & NW 110th Avenue,25.772740,-80.381375
+1045,6th St & NW 114th Avenue,25.774430,-80.381527
+1046,7th & NW 113th Avenue,25.775340,-80.379468
+1047,7th & NW 112th Avenue,25.775375,-80.377732
+1048,606 NW 112th Avenue - MD bus Stop,25.774855,-80.377632
+1049,11235 NW 5th St - Vann Academy / MD bus stop,25.773343,-80.377481
+1050,112th Avenue & NW 2nd Tr - MD bus stop,25.771329,-80.377317
+1051,112th Avenue & NW 1st St - MD bus stop,
 1052,11200 W. Flagler - Tower Plaza / MD bus stop,
 1053,11200 SW 2nd St - MD bus stop,
 1054,7th Tr SW 113th and 114th Avenue,
