@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Sweetwater Trolley</title>
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<style>
+		body {
+			padding: 0;
+			margin: 0;
+		}
+		html, body, #map {
+			height: 100%;
+			width: 100%;
+		}
+	</style>
+	</head>
+
+	<body >
+		<div id="map"></div>
+		<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
+		<script src="./Google.js"></script>
+		<script>
+		// Initialize map
+		var map = L.map('map').setView([25.789842,-80.374116], 12);
+
+		// Load MapBox map
+		var accessToken = 'pk.eyJ1IjoicXRyYW5kZXYiLCJhIjoiSDF2cGNjZyJ9.D1ybOKe77AQDPHkxCCEpJQ';
+		var osmLayer = L.tileLayer('https://{s}.tiles.mapbox.com/v4/qtrandev.lc0i743k/{z}/{x}/{y}.png?access_token=' + accessToken, {
+			maxZoom: 20,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+			'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery &copy; <a href="http://mapbox.com">Mapbox</a>'
+		});
+
+		// Set up Google Maps layers
+		var googleRoadmap = new L.Google('ROADMAP', { maxZoom: 20 });
+		var googleHybrid = new L.Google('HYBRID', { maxZoom: 20 });
+		map.addLayer(googleRoadmap);
+
+		L.control.layers({'Google Map':googleRoadmap, 'Google Satellite':googleHybrid, 'OpenStreetMap':osmLayer},{}).addTo(map);
+
+		var allMarkers = [];
+
+		function init() {
+			showRouteShapes();
+			requestTrolleys(); // Do initial request
+			setInterval(function() {
+				for (var i=0; i<allMarkers.length; i++) {
+					map.removeLayer(allMarkers[i]); // Remove markers for refresh
+				}
+				allMarkers = [];
+			requestTrolleys();
+		  }, 5000);
+		}
+
+		function requestTrolleys() {
+			$.getJSON('https://miami-transit-api.herokuapp.com/tracker.json',
+		  function(data) {
+			addTrolleys(data.features);
+		  });
+		}
+
+		function addTrolleys(trolleys) {
+			var i = 0;
+			for (i = 0; i < trolleys.length; i++) {
+				addMarker(
+					trolleys[i].properties.BusID,
+					trolleys[i].properties.lat,
+					trolleys[i].properties.lon,
+					trolleys[i].properties.bustime,
+					trolleys[i].properties.speed
+				);
+			}
+		}
+
+		function addMarker(BusID, lat, lon, bustime, speed) {
+			var marker = L.marker([lat, lon]).bindPopup(
+			  '<strong>Sweetwater Trolley</strong>'+
+					'<br>BusID: ' +  BusID +
+					'<br>Latitude: ' +  lat +
+					'<br>Longitude: ' +  lon +
+					'<br>Last Time: ' +  bustime +
+					'<br>Speed: ' +  speed + 'MPH',
+			  { offset: new L.Point(0, -22) }).addTo(map);
+			marker.on('mouseover', function (e) {
+				this.openPopup();
+			});
+			allMarkers.push(marker); // Add to remove on refresh
+		}
+
+		function showRouteShapes() {
+			requestShapeData();
+		}
+
+		function requestShapeData() {
+			$(document).ready(function() {
+				$.ajax({
+					type: "GET",
+					url: "./GTFS/shapes.txt",
+					dataType: "text",
+					success: function(data) {
+						processData(data);
+					}
+				});
+			});
+		}
+
+		function processData(allText) {
+			var allTextLines = allText.split(/\r\n|\n/);
+			var headers = allTextLines[0].split(',');
+			var routes = [];
+			for (var i=1; i<allTextLines.length; i++) {
+					var data = allTextLines[i].split(',');
+					if (data.length >= 4) {
+						if (routes[data[0]] === undefined) {
+							routes[data[0]] = [];
+						}
+						routes[data[0]].push(data);
+					}
+			}
+			for (var route in routes) {
+				addShape(routes[route]);
+			}
+		}
+
+		function addShape(shapes) {
+			var points = [];
+			for (var i=0; i<shapes.length; i++) {
+				points.push(L.latLng(shapes[i][1],shapes[i][2]));
+			}
+			var markerLine = L.polyline(points, {color: '#0000FF'});
+			markerLine.on('mouseover', function (e) {
+				this.openPopup();
+			});
+			markerLine.on('mouseout', function (e) {
+				this.closePopup();
+			});
+			map.addLayer(markerLine);
+		}
+
+		init();
+		</script>
+	</body>
+</html>
