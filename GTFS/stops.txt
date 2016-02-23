@@ -49,16 +49,16 @@ stop_id,stop_name,stop_lat,stop_lon
 1048,606 NW 112th Avenue - MD bus Stop,25.774855,-80.377632
 1049,11235 NW 5th St - Vann Academy / MD bus stop,25.773343,-80.377481
 1050,112th Avenue & NW 2nd Tr - MD bus stop,25.771329,-80.377317
-1051,112th Avenue & NW 1st St - MD bus stop,
-1052,11200 W. Flagler - Tower Plaza / MD bus stop,
-1053,11200 SW 2nd St - MD bus stop,
-1054,7th Tr SW 113th and 114th Avenue,
-1055,550 SW 115th Avenue - Sweetwater Creek,
-1056,115th SW 2nd Street - Stop sign,
-1057,11400 SW W. Flagler - Flagler Shopping Center / MD bus stop,
-1058,11388 W. Flagler - MD bus stop,
-1059,113th Avenue W. Flagler - MD bus stop,
-1060,11180 W. Flagler - MD bus stop,
+1051,112th Avenue & NW 1st St - MD bus stop,25.769770,-80.377214
+1052,11200 W. Flagler - Tower Plaza / MD bus stop,25.768012,-80.377045
+1053,11200 SW 2nd St - MD bus stop,25.766271,-80.376896
+1054,7th Tr & SW 113th and 114th Avenue,25.761596,-80.380066
+1055,550 SW 115th Avenue - Sweetwater Creek,25.763505,-80.382726
+1056,115th SW 2nd Street - Stop sign,25.766370,-80.382880
+1057,11400 SW W. Flagler - Flagler Shopping Center / MD bus stop,25.768147,-80.381379
+1058,11388 W. Flagler - MD bus stop,25.768138,-80.380259
+1059,113th Avenue & W. Flagler - MD bus stop,25.768206,-80.378428
+1060,11180 W. Flagler - MD bus stop,25.768275,-80.376449
 1061,10900 W. Flagler - Finish Line Gas Station,
 1062,10780 SW Flagler Madrono Restaurant,
 1063,10720 W. Flagler - Sedanos,
