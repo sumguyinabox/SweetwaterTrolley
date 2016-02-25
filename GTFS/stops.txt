@@ -59,32 +59,32 @@ stop_id,stop_name,stop_lat,stop_lon
 1058,11388 W. Flagler - MD bus stop,25.768138,-80.380259
 1059,113th Avenue & W. Flagler - MD bus stop,25.768206,-80.378428
 1060,11180 W. Flagler - MD bus stop,25.768275,-80.376449
-1061,10900 W. Flagler - Finish Line Gas Station,
-1062,10780 SW Flagler Madrono Restaurant,
-1063,10720 W. Flagler - Sedanos,
-1064,50 SW 108th Avenue - MD bus stop,
-1065,10690 W. Flagler - Chase Bank,
-1066,10500 SW W. Flagler - MacDonald,
-1067,103ct SW W. Flagler - MD bus stop,
-1068,10198 W. Flagler - Sunoco Gas Station / MD Bus stop,
-1069,10044 W. Flagler - Navarro,
-1070,99ct W. Flagler - MD bus stop,
-1071,9695 W. Flagler - Winn Dixie,
-1072,9825 W. Flagler - Ruben Dario Park,
-1073,99ct W. Flagler - MD bus stop,
-1074,102nd Avenue SW 1st St,
-1075,102nd Avenue SW 4th St - Stop sign,
-1076,10600 SW 4th St - Mildred & Claude Pepper Senior Center,
-1077,300 SW 107th Ave - Continental National Bank of Miami,
-1078,10750 SW 4th St - Sweetwater Towers,
-1079,10899 SW 4th St - MD bus stop,
-1080,740 SW 107th Avenue,
-1081,1200 SW 108th Avenue - FIU,
-1082,1525 SW 107th Avenue - Publix Supermarket / MD bus stop,
-1083,1225 SW 107th Avenue - Palmer House / MD bus stop,
-1084,595 SW 107th Avenue - MD bus stop,
-1085,10555 W. Flagler (West Side) - FIU Engineering Center,
-1086,561 NW 107th Ave -West Lake Village / MD bus stop,
-1087,690 NW 107th Ave - Tropical Super Market,
-1088,1455 NW 107 Ave- Macys & Old Navy - INTERNATIONAL MALL,
-1089,10750 NW 14th Street - MD bus stop,
+1061,10900 W. Flagler - Finish Line Gas Station,25.768302,-80.373549
+1062,10780 W. Flagler - Madrono Restaurant,25.768343,-80.370601
+1063,10720 W. Flagler - Sedanos,25.768399,-80.369534
+1064,50 SW 108th Avenue - MD bus stop,25.768110,-80.370911
+1065,10690 W. Flagler - Chase Bank,25.768376,-80.368426
+1066,10500 W. Flagler - McDonald,25.768495,-80.366162
+1067,SW 103 CT & W. Flagler - MD bus stop,25.768540,-80.363497
+1068,10198 W. Flagler - Sunoco Gas Station / MD Bus stop,25.768640,-80.360436
+1069,10044 W. Flagler - Navarro,25.768697,-80.359272
+1070,99 CT & W. Flagler - MD bus stop,25.768739,-80.358205
+1071,9695 W. Flagler - Winn Dixie,25.768852,-80.353415
+1072,9825 W. Flagler - Ruben Dario Park,25.769013,-80.355804
+1073,99 CT & W. Flagler - MD bus stop,25.768951,-80.358339
+1074,102nd Avenue & SW 1st St,25.767746,-80.360919
+1075,102nd Avenue & SW 4th St - Stop sign,25.765104,-80.360700
+1076,10600 SW 4th St - Mildred & Claude Pepper Senior Center,25.764925,-80.366725
+1077,300 SW 107th Ave - Continental National Bank of Miami,25.764952,-80.368275
+1078,10750 SW 4th St - Sweetwater Towers,25.764881,-80.370111
+1079,10899 SW 4th St - MD bus stop,25.764845,-80.372297
+1080,740 SW 107th Avenue,25.762037,-80.368366
+1081,1200 SW 107th Avenue - FIU,25.758136,-80.368424
+1082,1525 SW 107th Avenue - Publix Supermarket / MD bus stop,25.755364,-80.368422
+1083,1225 SW 107th Avenue - Palmer House / MD bus stop,25.757289,-80.368082
+1084,595 SW 107th Avenue - MD bus stop,25.763288,-80.368473
+1085,10555 W. Flagler (West Side) - FIU Engineering Center,25.769989,-80.368989
+1086,561 NW 107th Ave -West Lake Village / MD bus stop,25.773202,-80.369249
+1087,690 NW 107th Ave - Tropical Super Market,25.775358,-80.369436
+1088,1455 NW 107 Ave - Macys & Old Navy - INTERNATIONAL MALL,25.784529,-80.368509
+1089,10750 NW 14th Street - MD bus stop,25.786259,-80.369101
