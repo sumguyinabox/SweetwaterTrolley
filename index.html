@@ -26,7 +26,7 @@
 		<script src="./Google.js"></script>
 		<script>
 		// Initialize map
-		var map = L.map('map').setView([25.789842,-80.374116], 12);
+		var map = L.map('map').setView([25.775611,-80.369537], 14);
 
 		// Load MapBox map
 		var accessToken = 'pk.eyJ1IjoicXRyYW5kZXYiLCJhIjoiSDF2cGNjZyJ9.D1ybOKe77AQDPHkxCCEpJQ';
@@ -95,6 +95,7 @@
 
 		function showRouteShapes() {
 			requestShapeData();
+			requestStopsData();
 		}
 
 		function requestShapeData() {
@@ -105,6 +106,19 @@
 					dataType: "text",
 					success: function(data) {
 						processData(data);
+					}
+				});
+			});
+		}
+
+		function requestStopsData() {
+			$(document).ready(function() {
+				$.ajax({
+					type: "GET",
+					url: "./GTFS/stops.txt",
+					dataType: "text",
+					success: function(data) {
+						processStops(data);
 					}
 				});
 			});
@@ -141,6 +155,29 @@
 				this.closePopup();
 			});
 			map.addLayer(markerLine);
+		}
+
+		function processStops(allText) {
+			var allTextLines = allText.split(/\r\n|\n/);
+			var headers = allTextLines[0].split(',');
+			for (var i=1; i<allTextLines.length; i++) {
+					var data = allTextLines[i].split(',');
+					var stopIcon = L.icon({
+					    iconUrl: 'stop.png',
+					    iconSize: [17, 17],
+					    iconAnchor: [8, 8]
+					});
+					if (data.length >= 4) {
+						var marker = L.marker([data[2], data[3]], {icon: stopIcon}).bindPopup(
+						  '<strong>'+data[1]+'</strong>'+
+							'<br>Stop ID: ' +  data[0],
+						  { offset: new L.Point(0, -8) }).addTo(map);
+						marker.on('mouseover', function (e) {
+							this.openPopup();
+						});
+						map.addLayer(marker);
+					}
+			}
 		}
 
 		init();
