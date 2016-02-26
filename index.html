@@ -163,16 +163,17 @@
 			for (var i=1; i<allTextLines.length; i++) {
 					var data = allTextLines[i].split(',');
 					var stopIcon = L.icon({
-					    iconUrl: 'stop.png',
-					    iconSize: [17, 17],
-					    iconAnchor: [8, 8]
+						iconUrl: 'stop.png',
+						iconSize: [17, 17],
+						iconAnchor: [8, 8]
 					});
 					if (data.length >= 4) {
 						var marker = L.marker([data[2], data[3]], {icon: stopIcon}).bindPopup(
-						  '<strong>'+data[1]+'</strong>'+
+							'<strong>'+data[1]+'</strong>'+
 							'<br>Stop Sequence: ' +  data[0] +
-							'<br><a target="blank" href="https://maps.google.com?q=' + data[2] +',' + data[3] + '">'+ data[2] +',' + data[3] +'</a>',
-						  { offset: new L.Point(0, -8) }).addTo(map);
+							'<br><a target="" href="https://maps.google.com?q=' +
+							data[2] +',' + data[3] + '">'+ data[2] +',' + data[3] +'</a>',
+							{ offset: new L.Point(0, -8) }).addTo(map);
 						marker.on('mouseover', function (e) {
 							this.openPopup();
 						});
