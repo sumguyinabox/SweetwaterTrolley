@@ -171,7 +171,7 @@
 						var marker = L.marker([data[2], data[3]], {icon: stopIcon}).bindPopup(
 							'<strong>'+data[1]+'</strong>'+
 							'<br>Stop Sequence: ' +  data[0] +
-							'<br><a target="" href="https://maps.google.com?q=' +
+							'<br><a target="blank" href="https://maps.google.com?q=' +
 							data[2] +',' + data[3] + '">'+ data[2] +',' + data[3] +'</a>',
 							{ offset: new L.Point(0, -8) }).addTo(map);
 						marker.on('mouseover', function (e) {
