@@ -48,6 +48,7 @@
 		L.control.layers({'Google Map':googleRoadmap, 'Google Satellite':googleHybrid, 'OpenStreetMap':osmLayer},{}).addTo(map);
 
 		var allMarkers = [];
+		var useMiamiTransitApi = true;
 
 		function init() {
 			showRouteShapes();
@@ -62,10 +63,33 @@
 		}
 
 		function requestTrolleys() {
-			$.getJSON('https://miami-transit-api.herokuapp.com/tracker.json',
-		  function(data) {
-			addTrolleys(data.features);
-		  });
+			if (useMiamiTransitApi) {
+				$.getJSON('https://miami-transit-api.herokuapp.com/tracker.json',
+				function(data) {
+					addTrolleys(data.features);
+				}).error(
+					function () {
+						useMiamiTransitApi = false;
+						console.log("Error from Miami Transit API, using backup.");
+					}
+				);
+			} else {
+				requestTrolleysBackup();
+			}
+		}
+
+		function requestTrolleysBackup() {
+			$.getJSON(
+				'https://198.74.52.26/map/map-json.php',
+				function(data) {
+					addTrolleys(data.features);
+				}
+			).error(
+				function () {
+					useMiamiTransitApi = true;
+					console.log("Error from backup data source, using Miami Transit API.");
+				}
+			);
 		}
 
 		function addTrolleys(trolleys) {
