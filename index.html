@@ -26,7 +26,8 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
-		<script src="./Google.js"></script>
+		<script src="Google.js"></script>
+		<script src="GoogleTraffic.js"></script>
 		<script>
 		// Initialize map
 		var map = L.map('map').setView([25.775611,-80.369537], 14);
@@ -43,9 +44,10 @@
 		// Set up Google Maps layers
 		var googleRoadmap = new L.Google('ROADMAP', { maxZoom: 20 });
 		var googleHybrid = new L.Google('HYBRID', { maxZoom: 20 });
+		var googleTraffic = new L.GoogleTraffic('ROADMAP', { maxZoom: 20 });
 		map.addLayer(googleRoadmap);
 
-		L.control.layers({'Google Map':googleRoadmap, 'Google Satellite':googleHybrid, 'OpenStreetMap':osmLayer},{}).addTo(map);
+		L.control.layers({'Google Map':googleRoadmap, 'Google Satellite':googleHybrid, 'Google Traffic':googleTraffic,'OpenStreetMap':osmLayer},{}).addTo(map);
 
 		var allMarkers = [];
 		var useMiamiTransitApi = true;
