@@ -109,8 +109,8 @@
 			var marker = L.marker([lat, lon]).bindPopup(
 			  '<strong>Sweetwater Trolley</strong>'+
 					'<br>BusID: ' +  BusID +
-					'<br>Latitude: ' +  lat +
-					'<br>Longitude: ' +  lon +
+					'<br>Location: <a target="blank" href="https://maps.google.com?q=' +
+					lat + ',' +  lon + '">' + lat + ',' + lon + '</a>' +
 					'<br>Last Time: ' +  bustime +
 					'<br>Speed: ' +  speed + 'MPH',
 			  { offset: new L.Point(0, -22) }).addTo(map);
