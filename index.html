@@ -98,7 +98,7 @@
 			var i = 0;
 			for (i = 0; i < trolleys.length; i++) {
 				addMarker(
-					trolleys[i].properties.BusID,
+					trolleys[i].properties.deviceid,
 					trolleys[i].properties.lat,
 					trolleys[i].properties.lon,
 					trolleys[i].properties.bustime,
@@ -107,10 +107,10 @@
 			}
 		}
 
-		function addMarker(BusID, lat, lon, bustime, speed) {
+		function addMarker(deviceid, lat, lon, bustime, speed) {
 			var marker = L.marker([lat, lon]).bindPopup(
 			  '<strong>Sweetwater Trolley</strong>'+
-					'<br>BusID: ' +  BusID +
+					'<br>Bus ID: ' +  deviceid +
 					'<br>Location: <a target="blank" href="https://maps.google.com?q=' +
 					lat + ',' +  lon + '">' + lat + ',' + lon + '</a>' +
 					'<br>Last Time: ' +  bustime +
