@@ -114,12 +114,40 @@
 					'<br>Location: <a target="blank" href="https://maps.google.com?q=' +
 					lat + ',' +  lon + '">' + lat + ',' + lon + '</a>' +
 					'<br>Last Time: ' +  bustime +
-					'<br>Speed: ' +  speed + 'MPH',
+					'<br>Speed: ' +  speed + 'MPH' +
+					'<br>Updated: ' + getTimeDiffString(bustime),
 			  { offset: new L.Point(0, -22) }).addTo(map);
 			marker.on('mouseover', function (e) {
 				this.openPopup();
 			});
 			allMarkers.push(marker); // Add to remove on refresh
+		}
+
+		function getTimeDiffString(time) {
+			var currentTime = new Date().getTime();
+			var busTime = new Date(time).getTime();
+			var differenceMillis = currentTime - busTime;
+			var fiveMinutes = 5*60*1000;
+			var fifteenMinutes = 3*fiveMinutes;
+			var oneHour = 12*fiveMinutes;
+
+			var styleOutput = '';
+			if (differenceMillis > oneHour) {
+				styleOutput = '<strong>'+ Math.floor(differenceMillis/oneHour) + ' hours ago </strong>';
+				styleOutput = styleOutput.fontcolor("red");;
+			} else if (differenceMillis > fifteenMinutes) {
+				styleOutput = '<strong>'+ Math.floor(differenceMillis/(fifteenMinutes/15)) + ' minutes ago </strong>';
+				styleOutput = styleOutput.fontcolor("gray");
+			} else if (differenceMillis > fiveMinutes) {
+				styleOutput = '<strong>'+ Math.floor(differenceMillis/(fiveMinutes/5)) + ' minutes ago </strong>';
+				styleOutput = styleOutput.fontcolor("orange");
+			} else {
+				if (differenceMillis < 0) differenceMillis = 0;
+				styleOutput = '<strong>'+ Math.floor(differenceMillis/(fiveMinutes/5)) + ' minutes ago </strong>';
+				styleOutput = styleOutput.fontcolor("green");
+			}
+
+			return styleOutput;
 		}
 
 		function showRouteShapes() {
