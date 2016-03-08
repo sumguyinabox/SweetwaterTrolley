@@ -1,6 +1,6 @@
 # Sweetwater Trolley
 
-GTFS files and future map for Sweetwater Trolley
+Realtime Sweetwater Trolley Tracking and GTFS files
 
 # Who
 
