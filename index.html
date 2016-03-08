@@ -134,20 +134,25 @@
 
 			var styleOutput = '';
 			if (differenceMillis > oneHour) {
-				styleOutput = '<strong>'+ Math.floor(differenceMillis/oneHour) + ' hours ago </strong>';
+				var value = Math.floor(differenceMillis/oneHour);
+				styleOutput = '<strong>'+ value + (value>1?' hours':' hour') + ' ago </strong>';
 				styleOutput = styleOutput.fontcolor("red");;
 			} else if (differenceMillis > fifteenMinutes) {
-				styleOutput = '<strong>'+ Math.floor(differenceMillis/oneMinute) + ' minutes ago </strong>';
+				var value = Math.floor(differenceMillis/oneMinute);
+				styleOutput = '<strong>'+ value + (value>1?' minutes':' minute') + ' ago </strong>';
 				styleOutput = styleOutput.fontcolor("gray");
 			} else if (differenceMillis > fiveMinutes) {
-				styleOutput = '<strong>'+ Math.floor(differenceMillis/oneMinute) + ' minutes ago </strong>';
+				var value = Math.floor(differenceMillis/oneMinute);
+				styleOutput = '<strong>'+ value + (value>1?' minutes':' minute') + ' ago </strong>';
 				styleOutput = styleOutput.fontcolor("orange");
 			} else if (differenceMillis > oneMinute){
-				styleOutput = '<strong>'+ Math.floor(differenceMillis/oneMinute) + ' minutes ago </strong>';
+				var value = Math.floor(differenceMillis/oneMinute);
+				styleOutput = '<strong>'+ value + (value>1?' minutes':' minute') + ' ago </strong>';
 				styleOutput = styleOutput.fontcolor("green");
 			} else {
 				if (differenceMillis < 0) differenceMillis = 0;
-				styleOutput = '<strong>'+ Math.floor(differenceMillis/1000) + ' seconds ago </strong>';
+				var value = Math.floor(differenceMillis/1000);
+				styleOutput = '<strong>'+ value + (value>1?' seconds':' second') + ' ago </strong>';
 				styleOutput = styleOutput.fontcolor("green");
 			}
 
