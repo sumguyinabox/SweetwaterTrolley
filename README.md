@@ -28,6 +28,7 @@ We need a cheap open-source solution to track transit buses, and the Sweetwater 
 
 Quyen Tran (Code for Miami)  
 Dan Duffy (Code for Miami)  
+Eugene Brand (Code for Miami)  
 
 # How
 
